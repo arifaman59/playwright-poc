@@ -1,0 +1,4 @@
+{
+  "cart_button": "[data-test=\"shopping-cart-link\"]",
+  "login_button": "(//input[@id=\"login-button\"])[1]"
+}
