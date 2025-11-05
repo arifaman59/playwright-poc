@@ -1,10 +1,11 @@
 {
-  "name": "playwright-bdd-framework-course",
+  "name": "playwright-bdd-framework",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js",
+    "test:playwright": "playwright test",
     "report:html": "ts-node generate-report.ts",
     "report:multi:html": "ts-node generate-multiple-cucumber-report.ts",
     "all:html:report": "npm run test  && npm run report:html",
@@ -14,7 +15,10 @@
     "all:multi:html:report": "npm run test  && npm run report:multi:html",
     "test:cucumber": "npm run ",
     "test:ai": "cucumber-js --tags '@ai'",
-    "test:ai:report": "BROWSER=chrome npm run test:ai && npm run report:html"
+    "test:ai:report": "BROWSER=chrome npm run test:ai && npm run report:html",
+    "test:visual:update": "npx playwright test --update-snapshots",
+    "test:visual:report": "npx playwright test && npx playwright show-report --port=9858",
+    "test:coverage": "nyc --reporter=html --reporter=text-summary npx playwright test"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +28,8 @@
     "@cucumber/cucumber": "^12.2.0",
     "@playwright/test": "^1.56.1",
     "@types/node": "^24.9.2",
-    "cucumber-html-reporter": "^7.2.0",
+    "cucumber-html-reporter": "^6.0.0",
+    "nyc": "^17.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }

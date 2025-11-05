@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/playwright-bdd-framework-course.iml" filepath="$PROJECT_DIR$/.idea/playwright-bdd-framework-course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/playwright-bdd-framework.iml" filepath="$PROJECT_DIR$/.idea/playwright-bdd-framework.iml" />
     </modules>
   </component>
 </project>

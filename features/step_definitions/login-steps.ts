@@ -3,12 +3,14 @@ import {expect} from "@playwright/test"
 import getMyWebsite from "../utils/getMyWebsite";
 import {CustomWorld} from "../world";
 import elementLocators from '../locators.json';
-import {exists} from "node:fs";
 
 Given('I navigate to the {string} website', async function (this: CustomWorld, website: string) {
-    await this.page?.goto(getMyWebsite(website));
+    const response = await this.page?.goto(getMyWebsite(website));
+    // const headers = response?.headers() || {};
+    // expect(headers).toHaveProperty('content-security-policy');
+    // expect(headers).toHaveProperty('x-frame-options');
+    // expect(headers['strict-transport-security']).toContain('max-age');
 });
-
 
 When('I confirm the page title is {string}', async function (this: CustomWorld, expectedPageTitle: string) {
     const actualPageTitle = await this.page?.title();

@@ -31,7 +31,16 @@ export default defineConfig({
         /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
         trace: 'on-first-retry',
         // testIdAttribute: 'data-test'
+        // viewport: {width: 1280, height: 720},
+        launchOptions: {args: ['--hide-scrollbars']},
+        screenshot: "only-on-failure"
     },
+    // expect: {
+    //     toHaveScreenshot: {
+    //         threshold: 0.2,
+    //         maxDiffPixelRatio: 0.01
+    //     }
+    // }
 
     /* Configure projects for major browsers */
     // projects: [
@@ -76,5 +85,7 @@ export default defineConfig({
     //   command: 'npm run start',
     //   url: 'http://localhost:3000',
     //   reuseExistingServer: !process.env.CI,
-    // },
-});
+    // }
+})
+
+;
