@@ -34,7 +34,7 @@ Feature: Login Feature
 #    And I click the "backHome-button"
 #    And I am in the "inventory" page
 
-  @ai
+  @smart
   Scenario: verify order functionality
     Given I navigate to the "saucedemo" website
     And I confirm the page title is "Swag Labs"
@@ -47,7 +47,7 @@ Feature: Login Feature
       | Test.allTheThings() T-Shirt (Red) |
       | Sauce Labs Backpack               |
       | Sauce Labs Onesie                 |
-    And I click the "#shopping-cart-link" button
+    And I click the "shopping-cart-link" button
     And I am in the "cart" page
     And I can see all the selected products on the page
     And I click the "Checkout" button
@@ -66,5 +66,30 @@ Feature: Login Feature
     And I click the "Open Menu" button
     And I click the "Logout" link
     And I confirm the page title is "Swag Labs"
+
+
+#  @ai
+#  Scenario: Test Lotto.com website - pageTitle
+#    Given I navigate to the "https://www.thelott.com/" website
+#    Then I click the "Find a store" button
+#    And I am in the "find-a-store" page
+#    And I confirm the page title is "Find a Store | Australia's Official Lotteries | The Lott"
+
+
+#  @ai
+#  Scenario: Test Lotto.com website - pageTitle
+#    Given I navigate to the "https://www.thelott.com/" website
+#    And I confirm the page title is "The Lott - Official Home of Australian Lotteries"
+#    And I click the "Buy now" button
+#    And I confirm the page title is "Play an Oz Lotto entry"
+#    And the "Syndicates" button is visible
+#    And I click the "Results" link
+#    And I click the "Syndicates" button
+#    And I click the "Syndicate search" button
+#    And I click the "Synd, No." button
+#    And I type "Username" as "arifaman59"
+#    And I type "Password" as "test1234"
+#    Then I click the "Log in" button
+#    And "_loginError" "message" is displayed
 
 

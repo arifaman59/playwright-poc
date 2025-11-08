@@ -62,3 +62,6 @@ export class CustomWorld extends World {
 }
 
 setWorldConstructor(CustomWorld);
+
+// Xub4CbcdqzoSBaipD3owQnSTJ4XkYJtc1CK92Rbwoi4110
+// export APPLITOOLS_API_KEY='your_api_key_here'

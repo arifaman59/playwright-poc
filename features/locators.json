@@ -1,4 +1,5 @@
 {
   "cart_button": "[data-test=\"shopping-cart-link\"]",
-  "login_button": "(//input[@id=\"login-button\"])[1]"
+  "login_button": "(//input[@id=\"login-button\"])[1]",
+  "loginError": "[data-test-id=\"login-error-message\"]"
 }

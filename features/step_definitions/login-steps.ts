@@ -1,15 +1,12 @@
 import {Given, When, Then, DataTable, Before, BeforeAll, After, AfterAll} from "@cucumber/cucumber";
-import {expect} from "@playwright/test"
-import getMyWebsite from "../utils/getMyWebsite";
+import {expect, Locator} from "@playwright/test"
 import {CustomWorld} from "../world";
 import elementLocators from '../locators.json';
+import {CommonUtils} from "../utils/commonUtils";
+import {getSmartLocator} from "../utils/frameworkUtils";
 
-Given('I navigate to the {string} website', async function (this: CustomWorld, website: string) {
-    const response = await this.page?.goto(getMyWebsite(website));
-    // const headers = response?.headers() || {};
-    // expect(headers).toHaveProperty('content-security-policy');
-    // expect(headers).toHaveProperty('x-frame-options');
-    // expect(headers['strict-transport-security']).toContain('max-age');
+Given('I navigate to the {string} website', {timeout: 30000}, async function (this: CustomWorld, website: string) {
+    const response = await this.page?.goto(CommonUtils.getMyWebsite(website));
 });
 
 When('I confirm the page title is {string}', async function (this: CustomWorld, expectedPageTitle: string) {
@@ -42,32 +39,6 @@ Then(`I enter {string} as {string}`, async function (this: CustomWorld, locatorN
     await this.page?.locator(locatorPath).fill(data);
 });
 
-// Then('I click the {string}', async function (this: CustomWorld, locatorName: string) {
-//     let locatorPath = "";
-//     switch (locatorName.trim()) {
-//         case 'login-button':
-//             locatorPath = "(//input[@id='login-button'])[1]";
-//             break;
-//         case 'cart-button':
-//             locatorPath = '[data-test="shopping-cart-link"]';
-//             break;
-//         case 'checkout-button':
-//             locatorPath = "#checkout";
-//             break;
-//         case 'continue-button':
-//             locatorPath = "#continue";
-//             break;
-//         case 'finish-button':
-//             locatorPath = "#finish";
-//             break;
-//         case 'backHome-button':
-//             locatorPath = "#back-to-products";
-//             break;
-//         default:
-//             break
-//     }
-//     await this.page?.locator(locatorPath).click()
-// });
 
 Then('I am in the {string} page', async function (this: CustomWorld, partialPageTitle: string) {
     this.page = (this.context.pages())[0];
@@ -76,9 +47,7 @@ Then('I am in the {string} page', async function (this: CustomWorld, partialPage
 });
 
 Then('I added the following products to cart', async function (this: CustomWorld, dataTable: DataTable) {
-
     const items = dataTable.hashes();
-
     const products = await this.page.locator(".inventory_item").all();
     console.log(`Total products found : ${products.length}`)
 
@@ -121,24 +90,27 @@ Then('I can see the text {string}', async function (this: CustomWorld, expectedT
     }
 })
 
-//ai steps ///////
 
-Then(/^I click the "(.*)" (button|radioButton|checkBox|link)$/, async function (this: CustomWorld, locatorName: string, locatorType: string) {
-    if (locatorName.startsWith('_')) {
-        console.log(`Getting locator from locators.json : ${locatorName.trim().toLowerCase()}_${locatorType.toLowerCase()}`);
-        const locatorPath = elementLocators[`${locatorName.trim().toLowerCase().split('_')[1]}_${locatorType.toLowerCase()}`];
-        console.log(locatorPath)
-        await this.page.locator(locatorPath).click();
-    } else if (locatorName.startsWith('#')) {
-        await this.page.locator(`[data-test="${locatorName.trim().split('#')[1]}"]`).click();
-    } else
-        // @ts-ignore
-        await this.page.getByRole(locatorType, {name: locatorName}).first().click();
+Then(/^I click the "(.*)" (.*)$/, async function (this: CustomWorld, locatorName: string, locatorType: string) {
+    const element: Locator = await getSmartLocator(this.page, locatorName, locatorType);
+    await element.click();
+});
+
+
+Then(/^the "(.*)" (.*) is visible$/, async function (this: CustomWorld, locatorName: string, locatorType: string) {
+    const element: Locator = await getSmartLocator(this.page, locatorName, locatorType);
+    await expect(element).toBeVisible();
 });
 
 
 Then(/^I type "(.*)" as "(.*)"$/, async function (this: CustomWorld, locatorName: string, data: string) {
-    // await this.page.getByRole("textbox", {: locatorName}).fill(data);
-    await this.page.getByPlaceholder(locatorName).first().fill(data);
+    await (await getSmartLocator(this.page, locatorName, "textbox")).fill(data);
+});
 
+Then(/^"(.*)" "(.*)" is displayed$/, async function (this: CustomWorld, locatorName: string, locatorType) {
+    const locatorPath = elementLocators[`${locatorName.trim().toLowerCase().split('_')[1]}`];
+    const isElementVisible = await this.page.locator(locatorPath).isVisible();
+    expect(isElementVisible).toBeTruthy();
+    const msg = await this.page.locator(locatorPath).innerText();
+    console.log(msg);
 });

@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 928627416
+              "duration": 614179584
             }
           },
           {
@@ -23,11 +23,11 @@
             "line": 39,
             "name": "I navigate to the \"saucedemo\" website",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:7"
+              "location": "features/step_definitions/login-steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 1386496291
+              "duration": 786490207
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 40,
             "name": "I confirm the page title is \"Swag Labs\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:15"
+              "location": "features/step_definitions/login-steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 4916999
+              "duration": 12172790
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 41,
             "name": "I type \"Username\" as \"standard_user\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:140"
+              "location": "features/step_definitions/login-steps.ts:106"
             },
             "result": {
               "status": "passed",
-              "duration": 21081916
+              "duration": 33698125
             }
           },
           {
@@ -62,11 +62,11 @@
             "line": 42,
             "name": "I type \"Password\" as \"secret_sauce\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:140"
+              "location": "features/step_definitions/login-steps.ts:106"
             },
             "result": {
               "status": "passed",
-              "duration": 13092916
+              "duration": 8076000
             }
           },
           {
@@ -75,11 +75,11 @@
             "line": 43,
             "name": "I click the \"Login\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:126"
+              "location": "features/step_definitions/login-steps.ts:94"
             },
             "result": {
               "status": "passed",
-              "duration": 88988915
+              "duration": 91269207
             }
           },
           {
@@ -88,11 +88,11 @@
             "line": 44,
             "name": "I am in the \"inventory\" page",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:72"
+              "location": "features/step_definitions/login-steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 455582
+              "duration": 392792
             }
           },
           {
@@ -126,24 +126,24 @@
             "line": 45,
             "name": "I added the following products to cart",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:78"
+              "location": "features/step_definitions/login-steps.ts:49"
             },
             "result": {
               "status": "passed",
-              "duration": 99848499
+              "duration": 95622334
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 50,
-            "name": "I click the \"#shopping-cart-link\" button",
+            "name": "I click the \"shopping-cart-link\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:126"
+              "location": "features/step_definitions/login-steps.ts:94"
             },
             "result": {
               "status": "passed",
-              "duration": 78779333
+              "duration": 76799042
             }
           },
           {
@@ -152,11 +152,11 @@
             "line": 51,
             "name": "I am in the \"cart\" page",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:72"
+              "location": "features/step_definitions/login-steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 511624
+              "duration": 371458
             }
           },
           {
@@ -165,11 +165,11 @@
             "line": 52,
             "name": "I can see all the selected products on the page",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:98"
+              "location": "features/step_definitions/login-steps.ts:67"
             },
             "result": {
               "status": "passed",
-              "duration": 4820458
+              "duration": 4516041
             }
           },
           {
@@ -178,11 +178,11 @@
             "line": 53,
             "name": "I click the \"Checkout\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:126"
+              "location": "features/step_definitions/login-steps.ts:94"
             },
             "result": {
               "status": "passed",
-              "duration": 62708583
+              "duration": 60357875
             }
           },
           {
@@ -191,11 +191,11 @@
             "line": 54,
             "name": "I am in the \"checkout\" page",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:72"
+              "location": "features/step_definitions/login-steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 367000
+              "duration": 222333
             }
           },
           {
@@ -204,11 +204,11 @@
             "line": 55,
             "name": "I type \"First Name\" as \"Arif\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:140"
+              "location": "features/step_definitions/login-steps.ts:106"
             },
             "result": {
               "status": "passed",
-              "duration": 4560917
+              "duration": 5992124
             }
           },
           {
@@ -217,11 +217,11 @@
             "line": 56,
             "name": "I type \"Last Name\" as \"Aman\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:140"
+              "location": "features/step_definitions/login-steps.ts:106"
             },
             "result": {
               "status": "passed",
-              "duration": 8644667
+              "duration": 5783917
             }
           },
           {
@@ -230,11 +230,11 @@
             "line": 57,
             "name": "I type \"Zip/Postal Code\" as \"3030\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:140"
+              "location": "features/step_definitions/login-steps.ts:106"
             },
             "result": {
               "status": "passed",
-              "duration": 5385208
+              "duration": 10348458
             }
           },
           {
@@ -243,11 +243,11 @@
             "line": 58,
             "name": "I click the \"Continue\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:126"
+              "location": "features/step_definitions/login-steps.ts:94"
             },
             "result": {
               "status": "passed",
-              "duration": 78666374
+              "duration": 77331083
             }
           },
           {
@@ -256,11 +256,11 @@
             "line": 59,
             "name": "I am in the \"checkout-step-two\" page",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:72"
+              "location": "features/step_definitions/login-steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 234166
+              "duration": 216249
             }
           },
           {
@@ -269,11 +269,11 @@
             "line": 60,
             "name": "I can see all the selected products on the page",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:98"
+              "location": "features/step_definitions/login-steps.ts:67"
             },
             "result": {
               "status": "passed",
-              "duration": 4495624
+              "duration": 10592999
             }
           },
           {
@@ -282,11 +282,11 @@
             "line": 61,
             "name": "I click the \"Finish\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:126"
+              "location": "features/step_definitions/login-steps.ts:94"
             },
             "result": {
               "status": "passed",
-              "duration": 60960583
+              "duration": 61311541
             }
           },
           {
@@ -295,11 +295,11 @@
             "line": 62,
             "name": "I am in the \"checkout-complete\" page",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:72"
+              "location": "features/step_definitions/login-steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 192500
+              "duration": 256332
             }
           },
           {
@@ -308,11 +308,11 @@
             "line": 63,
             "name": "I can see the text \"Thank you for your order!\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:115"
+              "location": "features/step_definitions/login-steps.ts:84"
             },
             "result": {
               "status": "passed",
-              "duration": 1623583
+              "duration": 1528084
             }
           },
           {
@@ -321,11 +321,11 @@
             "line": 64,
             "name": "I click the \"Back Home\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:126"
+              "location": "features/step_definitions/login-steps.ts:94"
             },
             "result": {
               "status": "passed",
-              "duration": 81569000
+              "duration": 60735875
             }
           },
           {
@@ -334,11 +334,11 @@
             "line": 65,
             "name": "I am in the \"inventory\" page",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:72"
+              "location": "features/step_definitions/login-steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 226000
+              "duration": 197999
             }
           },
           {
@@ -347,11 +347,11 @@
             "line": 66,
             "name": "I click the \"Open Menu\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:126"
+              "location": "features/step_definitions/login-steps.ts:94"
             },
             "result": {
               "status": "passed",
-              "duration": 20755375
+              "duration": 21634958
             }
           },
           {
@@ -360,11 +360,11 @@
             "line": 67,
             "name": "I click the \"Logout\" link",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:126"
+              "location": "features/step_definitions/login-steps.ts:94"
             },
             "result": {
               "status": "passed",
-              "duration": 994043999
+              "duration": 1025014999
             }
           },
           {
@@ -373,11 +373,11 @@
             "line": 68,
             "name": "I confirm the page title is \"Swag Labs\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:15"
+              "location": "features/step_definitions/login-steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 1231334
+              "duration": 1075333
             }
           },
           {
@@ -385,13 +385,13 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 139348458
+              "duration": 119020749
             }
           }
         ],
         "tags": [
           {
-            "name": "@ai",
+            "name": "@smart",
             "line": 37
           }
         ],
@@ -403,6 +403,6 @@
     "keyword": "Feature",
     "name": "Login Feature",
     "tags": [],
-    "uri": "features/Login.feature"
+    "uri": "features/saucelab.feature"
   }
 ]
