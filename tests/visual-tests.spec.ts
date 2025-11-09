@@ -1,6 +1,6 @@
 import {expect, test} from "@playwright/test"
-import getMyWebsite from "../features/utils/getMyWebsite";
 import {Browser, BrowserContext, chromium, Page} from "playwright";
+import {CommonUtils} from "../features/utils/commonUtils";
 
 test.describe.serial("perform visual testing", () => {
     let browser: Browser;
@@ -20,7 +20,7 @@ test.describe.serial("perform visual testing", () => {
     });
 
     test("check home page", async function ({}) {
-        await page.goto(getMyWebsite("saucedemo"));
+        await page.goto(CommonUtils.getMyWebsite("saucedemo"));
         expect(await page.title()).toEqual("Swag Labs");
         await expect(page).toHaveScreenshot(`${test.info().title.split(" ")[1]}.png`, {
             fullPage: true
