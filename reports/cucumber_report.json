@@ -6,7 +6,7 @@
         "description": "",
         "id": "login-feature;verify-order-functionality",
         "keyword": "Scenario",
-        "line": 38,
+        "line": 8,
         "name": "verify order functionality",
         "steps": [
           {
@@ -14,85 +14,85 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 614179584
+              "duration": 1283859041
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 39,
+            "line": 9,
             "name": "I navigate to the \"saucedemo\" website",
             "match": {
               "location": "features/step_definitions/login-steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 786490207
+              "duration": 1688509875
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 40,
+            "line": 10,
             "name": "I confirm the page title is \"Swag Labs\"",
             "match": {
               "location": "features/step_definitions/login-steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 12172790
+              "duration": 12952374
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 41,
+            "line": 11,
             "name": "I type \"Username\" as \"standard_user\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:106"
+              "location": "features/step_definitions/login-steps.ts:107"
             },
             "result": {
               "status": "passed",
-              "duration": 33698125
+              "duration": 38663583
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 42,
+            "line": 12,
             "name": "I type \"Password\" as \"secret_sauce\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:106"
+              "location": "features/step_definitions/login-steps.ts:107"
             },
             "result": {
               "status": "passed",
-              "duration": 8076000
+              "duration": 11700749
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 43,
+            "line": 13,
             "name": "I click the \"Login\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:94"
+              "location": "features/step_definitions/login-steps.ts:95"
             },
             "result": {
               "status": "passed",
-              "duration": 91269207
+              "duration": 101571582
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 44,
+            "line": 14,
             "name": "I am in the \"inventory\" page",
             "match": {
               "location": "features/step_definitions/login-steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 392792
+              "duration": 388291
             }
           },
           {
@@ -123,261 +123,261 @@
               }
             ],
             "keyword": "And ",
-            "line": 45,
+            "line": 15,
             "name": "I added the following products to cart",
             "match": {
               "location": "features/step_definitions/login-steps.ts:49"
             },
             "result": {
               "status": "passed",
-              "duration": 95622334
+              "duration": 92193750
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 50,
+            "line": 20,
             "name": "I click the \"shopping-cart-link\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:94"
+              "location": "features/step_definitions/login-steps.ts:95"
             },
             "result": {
               "status": "passed",
-              "duration": 76799042
+              "duration": 75011416
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 51,
+            "line": 21,
             "name": "I am in the \"cart\" page",
             "match": {
               "location": "features/step_definitions/login-steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 371458
+              "duration": 247167
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 52,
+            "line": 22,
             "name": "I can see all the selected products on the page",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:67"
+              "location": "features/step_definitions/login-steps.ts:68"
             },
             "result": {
               "status": "passed",
-              "duration": 4516041
+              "duration": 4829125
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 53,
+            "line": 23,
             "name": "I click the \"Checkout\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:94"
+              "location": "features/step_definitions/login-steps.ts:95"
             },
             "result": {
               "status": "passed",
-              "duration": 60357875
+              "duration": 61661457
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 54,
+            "line": 24,
             "name": "I am in the \"checkout\" page",
             "match": {
               "location": "features/step_definitions/login-steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 222333
+              "duration": 225167
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 55,
+            "line": 25,
             "name": "I type \"First Name\" as \"Arif\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:106"
+              "location": "features/step_definitions/login-steps.ts:107"
             },
             "result": {
               "status": "passed",
-              "duration": 5992124
+              "duration": 6068833
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 56,
+            "line": 26,
             "name": "I type \"Last Name\" as \"Aman\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:106"
+              "location": "features/step_definitions/login-steps.ts:107"
             },
             "result": {
               "status": "passed",
-              "duration": 5783917
+              "duration": 13559000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 57,
+            "line": 27,
             "name": "I type \"Zip/Postal Code\" as \"3030\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:106"
+              "location": "features/step_definitions/login-steps.ts:107"
             },
             "result": {
               "status": "passed",
-              "duration": 10348458
+              "duration": 5574583
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 58,
+            "line": 28,
             "name": "I click the \"Continue\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:94"
+              "location": "features/step_definitions/login-steps.ts:95"
             },
             "result": {
               "status": "passed",
-              "duration": 77331083
+              "duration": 73617999
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 59,
+            "line": 29,
             "name": "I am in the \"checkout-step-two\" page",
             "match": {
               "location": "features/step_definitions/login-steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 216249
+              "duration": 218333
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 60,
+            "line": 30,
             "name": "I can see all the selected products on the page",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:67"
+              "location": "features/step_definitions/login-steps.ts:68"
             },
             "result": {
               "status": "passed",
-              "duration": 10592999
+              "duration": 3905083
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 61,
+            "line": 31,
             "name": "I click the \"Finish\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:94"
+              "location": "features/step_definitions/login-steps.ts:95"
             },
             "result": {
               "status": "passed",
-              "duration": 61311541
+              "duration": 64362207
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 62,
+            "line": 32,
             "name": "I am in the \"checkout-complete\" page",
             "match": {
               "location": "features/step_definitions/login-steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 256332
+              "duration": 261165
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 63,
+            "line": 33,
             "name": "I can see the text \"Thank you for your order!\"",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:84"
+              "location": "features/step_definitions/login-steps.ts:85"
             },
             "result": {
               "status": "passed",
-              "duration": 1528084
+              "duration": 2117124
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 64,
+            "line": 34,
             "name": "I click the \"Back Home\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:94"
+              "location": "features/step_definitions/login-steps.ts:95"
             },
             "result": {
               "status": "passed",
-              "duration": 60735875
+              "duration": 65433958
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 65,
+            "line": 35,
             "name": "I am in the \"inventory\" page",
             "match": {
               "location": "features/step_definitions/login-steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 197999
+              "duration": 298458
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 66,
+            "line": 36,
             "name": "I click the \"Open Menu\" button",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:94"
+              "location": "features/step_definitions/login-steps.ts:95"
             },
             "result": {
               "status": "passed",
-              "duration": 21634958
+              "duration": 20003333
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 67,
+            "line": 37,
             "name": "I click the \"Logout\" link",
             "match": {
-              "location": "features/step_definitions/login-steps.ts:94"
+              "location": "features/step_definitions/login-steps.ts:95"
             },
             "result": {
               "status": "passed",
-              "duration": 1025014999
+              "duration": 1041502958
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 68,
+            "line": 38,
             "name": "I confirm the page title is \"Swag Labs\"",
             "match": {
               "location": "features/step_definitions/login-steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 1075333
+              "duration": 1103041
             }
           },
           {
@@ -385,14 +385,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 119020749
+              "duration": 158601999
             }
           }
         ],
         "tags": [
           {
             "name": "@smart",
-            "line": 37
+            "line": 7
           }
         ],
         "type": "scenario"

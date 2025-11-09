@@ -59,26 +59,3 @@ export async function getSmartLocator(page: Page, locatorText: string, locatorTy
     }
     throw new Error(`❌ failed to find the locator ${locatorText}`);
 }
-
-export async function getChildLocator(page: Page, parentLocator: Locator, locatorText: string) {
-    let locatorStrategy = [
-        page.locator(`[data-test=${locatorText}]`),
-        page.locator(`[data-test-id=${locatorText}]`),
-        page.getByText(locatorText, {exact: true}),
-        page.locator(`#${locatorText}`),
-        page.locator(`.${locatorText}`),
-    ]
-
-    for (const locator of locatorStrategy) {
-        try {
-            if (await locator.isVisible()) {
-                return locator.all();
-            }
-        } catch (error: any) {
-            console.log(`Trying to find a unique locator for ${locatorText}, current occurrence is : ${await locator.count()}`);
-        }
-    }
-    return [];
-
-
-}

@@ -12,7 +12,7 @@ Feature: Login Feature
     Then I type "Password" as "secret_sauce"
     And I click the "Login" button
     And I am in the "inventory" page
-    And I added the following "inventory_items" to cart
+    And I added the following products to cart
       | product                           |
       | Test.allTheThings() T-Shirt (Red) |
       | Sauce Labs Backpack               |
