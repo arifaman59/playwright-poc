@@ -3,7 +3,7 @@ import {expect, Locator} from "@playwright/test"
 import {CustomWorld} from "../world";
 import elementLocators from '../locators.json';
 import {CommonUtils} from "../utils/commonUtils";
-import {getSmartLocator} from "../utils/frameworkUtils";
+import {getChildLocator, getSmartLocator} from "../utils/frameworkUtils";
 
 Given('I navigate to the {string} website', {timeout: 30000}, async function (this: CustomWorld, website: string) {
     const response = await this.page?.goto(CommonUtils.getMyWebsite(website));
@@ -46,22 +46,25 @@ Then('I am in the {string} page', async function (this: CustomWorld, partialPage
     expect(actualPageUrl).toMatch(partialPageTitle)
 });
 
-Then('I added the following products to cart', async function (this: CustomWorld, dataTable: DataTable) {
+Then('I added the following "(.*)" to cart', async function (this: CustomWorld, parentLocatorInfo: string, childLocatorInfo: string, dataTable: DataTable) {
     const items = dataTable.hashes();
-    const products = await this.page.locator(".inventory_item").all();
-    console.log(`Total products found : ${products.length}`)
+    // const products = await this.page.locator(".inventory_item").all();
+    const parentProduct = await getSmartLocator(this.page, parentLocatorInfo, "div", 1);
+    const childLocators = await getChildLocator(this.page, parentProduct, childLocatorInfo);
 
-    for (let product of products) {
-        let myProduct = await product.locator(".inventory_item_name").innerText();
+    console.log(`Total products found : ${childLocators.length}`)
 
-        for (let item of items) {
-            if (item["product"].trim() === myProduct) {
-                await product.getByRole('button', {name: "Add to cart"}).click();
-            }
-        }
-    }
-
-    this.setData("products", items);
+    // for (let product of products) {
+    //     let myProduct = await product.locator(".inventory_item_name").innerText();
+    //
+    //     for (let item of items) {
+    //         if (item["product"].trim() === myProduct) {
+    //             await product.getByRole('button', {name: "Add to cart"}).click();
+    //         }
+    //     }
+    // }
+    //
+    // this.setData("products", items);
 })
 
 Then('I can see all the selected products on the page', async function (this: CustomWorld) {
