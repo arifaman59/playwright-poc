@@ -7,27 +7,33 @@ export async function getSmartLocator(page: Page, locatorText: string, locatorTy
 
 
     let locatorStrategy = [
-        page.locator(`[data-test=${locatorText}]`),
-        page.locator(`[data-test-id=${locatorText}]`),
-        page.getByText(locatorText, {exact: true}),
+        page.locator(`span:has-text("${locatorText}")`),
+        page.locator(`[data-test="${locatorText}"]`),
+        page.locator(`[data-test-id="${locatorText}"]`),
+        page.getByText(`${locatorText}`, {exact: true}),
         page.locator(`#${locatorText}`),
         page.locator(`.${locatorText}`),
     ]
 
 
-    const linkStrategy = [page.getByRole("link", {name: locatorText})]
+    const linkStrategy = [
+        page.getByRole("link", {name: `${locatorText}`}),
+        page.locator(`//a[contains(text(), "${locatorText}")]`),
+        // page.getByRole('link', {name: 'View Results'})
+    ]
 
     const buttonStrategy = [
-        page.getByRole('button', {name: locatorText}),
-        page.locator(`//button[contains(text(), '${locatorText}')]`),
+        page.getByRole('button', {name: `${locatorText}`}),
+        page.locator(`//button[contains(text(), "${locatorText}")]`),
+        page.locator(`span:has-text("${locatorText}")`),
     ]
 
 
     const textboxStrategy = [
-        page.getByRole('textbox', {name: locatorText}),
-        page.getByPlaceholder(locatorText),
-        page.getByLabel(locatorText),
-        page.getByTitle(locatorText),
+        page.getByRole('textbox', {name: `${locatorText}`}),
+        page.getByPlaceholder(`${locatorText}`),
+        page.getByLabel(`${locatorText}`),
+        page.getByTitle(`${locatorText}`),
     ]
 
     switch (locatorType?.toLowerCase().trim()) {
@@ -46,6 +52,7 @@ export async function getSmartLocator(page: Page, locatorText: string, locatorTy
 
     for (const locator of locatorStrategy) {
         try {
+            // await page.waitForTimeout(500);
             if (await locator.count() == expectedLocatorCount && await locator.isVisible()) {
                 // console.log(`Locator found for ${locatorText} as ${locator}`)
                 // console.log(`Visible : ${await locator.isVisible()}`)

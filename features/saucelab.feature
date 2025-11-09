@@ -38,3 +38,13 @@ Feature: Login Feature
     And I confirm the page title is "Swag Labs"
 
 
+  @ai
+  Scenario: verify lott.com.au website
+    Given I navigate to the "https://www.thelott.com/" website
+    And I confirm the page title is "The Lott - Official Home of Australian Lotteries"
+    And I am in the "thelott" page
+    And I click the "Buy Now" button
+    And I am in the "play" page
+    And I click the "View Results" link
+    And I am in the "results" page
+
