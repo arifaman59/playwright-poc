@@ -1,4 +1,4 @@
 #!/bin/bash
 
-git fetch origin main
-git checkout origin/main -- tests/visual-tests.spec.ts-snapshots/
+git fetch origin visuals
+git checkout origin/visuals -- tests/visual-tests.spec.ts-snapshots/
